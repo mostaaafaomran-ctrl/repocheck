@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RepoCheck | GitHub repo health score</title>
+<meta name="description" content="Paste a public GitHub repo and get a health score with a fix list: README, license, tests, CI, topics, templates. Free, no signup.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="logo"><span class="dot"></span>RepoCheck</div><button id="lang" class="ghost">العربية</button></header>
+<main>
+  <section class="hero">
+    <h1 id="h1">How healthy is your repo?</h1>
+    <p id="sub">Paste a public GitHub repo. Get a score out of 100 and a fix list.</p>
+    <form id="f"><input id="repo" placeholder="owner/repo or https://github.com/owner/repo" autocomplete="off" spellcheck="false"><button id="go">Check</button></form>
+    <div id="ex"></div>
+  </section>
+  <section id="res" hidden>
+    <div class="top">
+      <div class="ring" id="ring"><b id="score">0</b><span>/100</span></div>
+      <div><h2 id="rname"></h2><p id="rdesc"></p><p id="grade"></p></div>
+    </div>
+    <div id="fixes"></div>
+    <h3 id="allH">All checks</h3>
+    <ul id="checks"></ul>
+    <div class="badge"><span id="bl">Badge for your README</span><code id="bcode"></code></div>
+  </section>
+  <div id="err"></div>
+</main>
+<footer>MIT · <a href="https://github.com/mostaaafaomran-ctrl/repocheck">GitHub</a> · <span id="note">Uses the public GitHub API from your browser (60 requests per hour per IP).</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
